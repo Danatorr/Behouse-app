@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import WelcomeSreen from './app/screens/WelcomeSreen';
+import LoginScreen from './screens/LoginScreen';
 
 
 export default function App() {
   return (
-  <WelcomeSreen />
+    <LoginScreen />
   );
 }
