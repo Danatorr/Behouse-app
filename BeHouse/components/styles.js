@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 import  Constants  from 'expo-constants';
 
 const StatusBarHeight = Constants.statusBarHeight;
@@ -54,4 +54,59 @@ export const PageTitleWhite = styled.Text`
     font-weight: bold;
     color: ${primary};
     padding: 10px;
+`;
+
+export const SubtTitleWhite = styled.Text`
+    font-size: 12px;
+    text-align: center;
+    font-weight: bold;
+    color: ${primary};
+`;
+
+export const StyledFormArea = styled.View`
+    width: 90%;
+`;
+
+export const StyledTextInput = styled.TextInput`
+    position: absolute;
+    width: 260px;
+    height: 33px;
+    left: 50px;
+    top: 275px;
+    border: 0.5px solid #A4A4A4;
+    border-radius: 5px;
+`;
+
+export const StyledTextInputLabel = styled.Text`
+    color: #A4A4A4;
+    font-size: 8px;
+    text-align: left;
+`;
+
+export const LeftIcon = styled.View`
+    left: 15px;
+    top: 38px;
+    position: absolute;
+    z-index: 1;
+`;
+
+export const RightIcon = styled.TouchableOpacity`
+    left: 15px;
+    top: 38px;
+    position: absolute;
+    z-index: 1;
+`;
+
+export const StyleButton = styled.TouchableOpacity`
+    position: absolute;
+    width: 260px;
+    height: 33px;
+    left: 50px;
+    top: 381px;
+    background: #000000;
+    border-radius: 5px;
+`;
+
+export const ButtonText = styled.Text`
+    color: 'white';
 `;
