@@ -89,16 +89,29 @@ export const RightIcon = styled.TouchableOpacity`
     z-index: 1;
 `;
 
-export const StyleButton = styled.TouchableOpacity`
+export const StyledButton = styled.TouchableOpacity`
     position: absolute;
     width: 260px;
     height: 33px;
-    left: 50px;
-    top: 381px;
+    top: 125px;
     background: #000000;
     border-radius: 5px;
+    align-items: center;
+    padding-top: 6px;
 `;
 
 export const ButtonText = styled.Text`
-    color: 'white';
+    color: white;
+`;
+
+export const ErrorMessageBox = styled.Text`
+    text-align: center;
+    font-size: 13px;
+`;
+
+export const Line = styled.View`
+    height: 1px;
+    width: 100%;
+    background-color: ${secondary};
+    margin-vertical: 10px;
 `;

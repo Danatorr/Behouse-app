@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, } from 'react-native';
-import { StyledContainer, InnerContainer, PageLogo, PageTitleBlack, PageTitleWhite, SubtTitleWhite, StyledFormArea, StyledTextInput, ButtonText, LeftIcon, RightIcon, StyleButton, StyledTextInputLabel, Colors} from '../components/styles.js';
+import { StyledContainer, InnerContainer, PageLogo, PageTitleBlack, PageTitleWhite, SubtTitleWhite, StyledFormArea, StyledTextInput, ButtonText, LeftIcon, RightIcon, StyledButton, StyledTextInputLabel, Colors} from '../components/styles.js';
 import { StatusBar } from 'expo-status-bar';
 import { Formik } from 'formik';
 
@@ -46,7 +46,13 @@ const LoginScreen = () => {
                         hidePassword={hidePassword}
                         setHidePassword={setHidePassword}
                     />
-                    </StyledFormArea>)}
+                    <StyledButton onPress={handleSubmit}>
+                        <ButtonText>
+                            Entrar
+                        </ButtonText>
+                    </StyledButton>
+                    </StyledFormArea>
+                    )}
 
                 </Formik>
             </InnerContainer>
