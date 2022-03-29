@@ -4,17 +4,6 @@ import  Constants  from 'expo-constants';
 
 const StatusBarHeight = Constants.statusBarHeight;
 
-/*
-export const styles = StyleSheet.create({
-    background: {
-        flex: 1,
-        justifyContent: 'flex-end',
-        alignItems: 'center',
-        backgroundColor: 'white',
-    },
-})
-*/
-
 export const Colors = {
     primary: '#FFFFFF',
     secondary: '#000000',
@@ -72,12 +61,10 @@ export const StyledTextInput = styled.TextInput`
     height: 33px;
     border: 0.5px solid #A4A4A4;
     border-radius: 5px;
-    padding: 15px;
-    padding-left: 55px;
+    padding-left: 5px;
     padding-right: 55px;
     margin-vertical 3px;
     margin-top: 20px;
-    color: red;
 `;
 
 export const StyledTextInputLabel = styled.Text`
