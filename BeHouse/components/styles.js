@@ -208,8 +208,8 @@ export const ExtraView = styled.View`
     background-color: ${secondary};
     position: absolute;
     width: 116%;
-    height: 130px;
-    top: 375px;
+    height: 170px;
+    top: 355px;
     
     border-radius: 30px;
 `;
@@ -234,5 +234,5 @@ export const TextLinkContent = styled.Text`
     color: ${primary};
     font-size: 18px;
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
 `;
