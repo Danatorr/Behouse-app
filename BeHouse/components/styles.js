@@ -19,9 +19,22 @@ export const StyledContainer = styled.View`
 `;
 
 export const InnerContainer = styled.View`
-    flex: 1px;
+    flex: 1;
     width: 100%;
     align-items: center;
+
+    ${(props) => props.cadastro == true && `
+        position: absolute;
+        top: 100px;
+        height: 105%;
+        flex: 1;
+        width: 115%;
+        align-items: center;
+        align-self: center;
+        
+        border-radius: 40px;
+        background-color: ${secondary}
+    `}
 `;
 
 export const PageLogo = styled.Image`
@@ -53,11 +66,15 @@ export const PageTitleWhite = styled.Text`
     padding: 10px;
 `;
 
-export const SubtTitleWhite = styled.Text`
-    font-size: 12px;
+export const PageSubTitleWhite = styled.Text`
+    font-size: 18px;
     text-align: center;
     font-weight: bold;
     color: ${primary};
+
+    position: absolute;
+    top: 320px;
+    align-self: center;
 `;
 
 export const StyledFormArea = styled.View`
@@ -80,7 +97,24 @@ export const StyledTextInputLabel = styled.Text`
     font-size: 8px;
     text-align: left;
     position: absolute;
+    top: 14px;
     left: 10px;
+    background-color: ${primary}
+    z-index: 1;
+    padding: 0px 2px;
+
+    ${(props) => props.cadastro == true && `
+        color: #A4A4A4;
+        font-size: 8px;
+        text-align: left;
+        position: absolute;
+        top: 14px;
+        left: 10px;
+        background-color: ${secondary}
+        z-index: 1;
+        padding: 0px 2px;
+    `}
+    
 `;
 
 export const LeftIcon = styled.View`
@@ -119,10 +153,38 @@ export const StyledButton = styled.TouchableOpacity`
         padding-top: 6px;
         border-radius: 90px;
     `}
+
+    ${(props) => props.cadastroGoogle == true && `
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        top: 350px;
+        background: ${primary};
+        border-radius: 5px;
+        align-items: center;
+        align-self: center;
+        padding-top: 6px;
+        border-radius: 90px;
+    `}
+
+    ${(props) => props.cadastro == true && `
+        position: absolute;
+        width: 260px;
+        height: 33px;
+        top: 280px;
+        background: ${primary};
+        border-radius: 5px;
+        align-items: center;
+        padding-top: 6px;
+    `}
 `;
 
 export const ButtonText = styled.Text`
     color: white;
+
+    ${(props) => props.cadastro == true && `
+        color: black;
+    `}
 `;
 
 export const ErrorMessageBox = styled.Text`
