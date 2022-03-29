@@ -167,6 +167,10 @@ export const TextLink = styled.TouchableOpacity`
 `;
 
 export const TextLinkContent = styled.Text`
-    color: ${primary}
-    font-size: 15px;
+    justify-content: center;
+    align-content: center;
+    color: ${primary};
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
 `;

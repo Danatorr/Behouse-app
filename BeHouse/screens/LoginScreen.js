@@ -84,7 +84,11 @@ const LoginScreen = () => {
                         <Fontisto name="google" color={primary} size={48}/>
                     </StyledButton>
                     <ExtraView>
-                        <ExtraText>Cadastre-se</ExtraText>
+                        <TextLink>
+                            <TextLinkContent>
+                                Cadastre-se
+                            </TextLinkContent>
+                        </TextLink>
                     </ExtraView>
 
                     </StyledFormArea>
