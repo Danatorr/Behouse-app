@@ -1,10 +1,33 @@
 import React, { useState } from 'react';
 import { View, } from 'react-native';
-import { StyledContainer, InnerContainer, PageLogo, PageTitleBlack, PageTitleWhite, SubtTitleWhite, StyledFormArea, StyledTextInput, ButtonText, LeftIcon, RightIcon, StyledButton, StyledTextInputLabel, Colors} from '../components/styles.js';
+import { 
+    StyledContainer, 
+    InnerContainer, 
+    PageLogo, 
+    PageSubTitleBlack, 
+    PageTitleBlack, 
+    PageTitleWhite, 
+    SubtTitleWhite, 
+    StyledFormArea, 
+    StyledTextInput, 
+    ButtonText, 
+    LeftIcon, 
+    RightIcon, 
+    StyledButton, 
+    StyledTextInputLabel, 
+    Colors, 
+    Line, 
+    ErrorMessageBox,
+    ExtraText,
+    ExtraView,
+    TextLink,
+    TextLinkContent
+
+} from '../components/styles.js';
 import { StatusBar } from 'expo-status-bar';
 import { Formik } from 'formik';
 
-import { Octicions, Ionicons } from '@expo/vector-icons'
+import { Octicions, Ionicons, Fontisto } from '@expo/vector-icons'
 
 const { primary, secondary } = Colors;
 
@@ -46,11 +69,24 @@ const LoginScreen = () => {
                         hidePassword={hidePassword}
                         setHidePassword={setHidePassword}
                     />
+
+                    <ErrorMessageBox>
+                        ...
+                    </ErrorMessageBox>
                     <StyledButton onPress={handleSubmit}>
                         <ButtonText>
                             Entrar
                         </ButtonText>
                     </StyledButton>
+                    <Line />
+                    <PageSubTitleBlack>Entrar com: </PageSubTitleBlack>
+                    <StyledButton google={true} onPress={handleSubmit}>
+                        <Fontisto name="google" color={primary} size={48}/>
+                    </StyledButton>
+                    <ExtraView>
+                        <ExtraText>Cadastre-se</ExtraText>
+                    </ExtraView>
+
                     </StyledFormArea>
                     )}
 

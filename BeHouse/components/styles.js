@@ -37,6 +37,14 @@ export const PageTitleBlack = styled.Text`
     padding-top: 75px;
 `;
 
+export const PageSubTitleBlack = styled.Text`
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: ${secondary};
+    padding-top: 20px;
+`;
+
 export const PageTitleWhite = styled.Text`
     font-size: 18px;
     text-align: center;
@@ -98,6 +106,19 @@ export const StyledButton = styled.TouchableOpacity`
     border-radius: 5px;
     align-items: center;
     padding-top: 6px;
+
+    ${(props) => props.google == true && `
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        top: 197px;
+        background: #000000;
+        border-radius: 5px;
+        align-items: center;
+        align-self: center;
+        padding-top: 6px;
+        border-radius: 90px;
+    `}
 `;
 
 export const ButtonText = styled.Text`
@@ -114,4 +135,38 @@ export const Line = styled.View`
     width: 100%;
     background-color: ${secondary};
     margin-vertical: 10px;
+`;
+
+export const ExtraView = styled.View`
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    padding: 10px;
+    background-color: ${secondary};
+    position: absolute;
+    width: 116%;
+    height: 130px;
+    top: 375px;
+    
+    border-radius: 30px;
+`;
+
+export const ExtraText = styled.Text`
+    justify-content: center;
+    align-content: center;
+    color: ${primary};
+    font-size: 18px;
+    position: absolute;
+    bottom: 78px;
+`;
+
+export const TextLink = styled.TouchableOpacity`
+    justify-content: center;
+    align-items: center;
+`;
+
+export const TextLinkContent = styled.Text`
+    color: ${primary}
+    font-size: 15px;
 `;
