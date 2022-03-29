@@ -1,12 +1,16 @@
-import React from 'react';
-import { ImageBackground, View, StyleSheet, Image, Text, SafeAreaView } from 'react-native';
+import React, { useState } from 'react';
+import { View, } from 'react-native';
 import { StyledContainer, InnerContainer, PageLogo, PageTitleBlack, PageTitleWhite, SubtTitleWhite, StyledFormArea, StyledTextInput, ButtonText, LeftIcon, RightIcon, StyleButton, StyledTextInputLabel, Colors} from '../components/styles.js';
 import { StatusBar } from 'expo-status-bar';
 import { Formik } from 'formik';
 
+import { Octicions, Ionicons } from '@expo/vector-icons'
+
 const { primary, secondary } = Colors;
 
 const LoginScreen = () => {
+    const [hidePassword, setHidePassword] = useState(true)
+
     return(
         <StyledContainer>
             <StatusBar style='dark'/>
@@ -37,7 +41,10 @@ const LoginScreen = () => {
                         onChangeText={handleChange('password')}
                         onBlur={handleBlur('password')}
                         value={values.password}
-                        secureTextEntry={true}
+                        secureTextEntry={hidePassword}
+                        isPassword={true}
+                        hidePassword={hidePassword}
+                        setHidePassword={setHidePassword}
                     />
                     </StyledFormArea>)}
 
@@ -48,11 +55,16 @@ const LoginScreen = () => {
     );
 }
 
-const UserTextInput = ({label, ...props}) => {
+const UserTextInput = ({label, icon, isPassword, hidePassword, setHidePassword, ...props}) => {
     return(
         <View>
             <StyledTextInputLabel>{label}</StyledTextInputLabel>
             <StyledTextInput {...props}/>
+            {isPassword && (
+                <RightIcon onPress={() => setHidePassword(!hidePassword)}>
+                        <Ionicons name={hidePassword ? 'md-eye-off' : 'md-eye'} size={20} color={"#A4A4A4"}/>
+                </RightIcon>
+            )}
         </View>
     )
 }
