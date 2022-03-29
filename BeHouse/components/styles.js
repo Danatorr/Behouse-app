@@ -65,14 +65,16 @@ export const SubtTitleWhite = styled.Text`
 
 export const StyledFormArea = styled.View`
     width: 90%;
+    text-align: center;
+    flex: 1;
+    align-items: flex-start;
 `;
 
 export const StyledTextInput = styled.TextInput`
     position: absolute;
     width: 260px;
     height: 33px;
-    left: 50px;
-    top: 275px;
+    top: 2px;
     border: 0.5px solid #A4A4A4;
     border-radius: 5px;
 `;
@@ -81,6 +83,8 @@ export const StyledTextInputLabel = styled.Text`
     color: #A4A4A4;
     font-size: 8px;
     text-align: left;
+    position: absolute;
+    left: 10px;
 `;
 
 export const LeftIcon = styled.View`

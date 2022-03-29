@@ -29,6 +29,16 @@ const LoginScreen = () => {
                         value={values.email}
                         keyboardType="email-address"
                     />
+
+                    <UserTextInput 
+                        label="Password"
+                        placeholder="* * * * * * * *"
+                        placeholderTextColor="#A4A4A4"
+                        onChangeText={handleChange('password')}
+                        onBlur={handleBlur('password')}
+                        value={values.password}
+                        secureTextEntry={true}
+                    />
                     </StyledFormArea>)}
 
                 </Formik>
@@ -38,7 +48,7 @@ const LoginScreen = () => {
     );
 }
 
-const UserTextInput = (label, icon, ...props) => {
+const UserTextInput = ({label, icon, ...props}) => {
     return(
         <View>
             <StyledTextInputLabel>{label}</StyledTextInputLabel>
@@ -46,32 +56,5 @@ const UserTextInput = (label, icon, ...props) => {
         </View>
     )
 }
-
-
-/*
-function LoginScreen(props) {
-    return (
-        <ImageBackground 
-            style={style.background}
-            source={require("../assets/background.png")}>
-            <View style={style.logoContainter}>
-                <Image source={require("../assets/splash.png")} style={style.logo}/>
-                <Text style={style.title}>Seja bem vindo(a)!</Text>
-            </View>
-            <View style={style.loginButton}>
-                <Text style={style.center}>Login</Text>
-            </View>
-            <View style={styles.registerButton}>
-                <Text style={style.center}>Cadastrar-se</Text>
-            </View>
-        </ImageBackground>
-        
-        <SafeAreaView style={style.background}>
-            <View>Teste</View>
-        </SafeAreaView>
-
-        );
-}
-*/
 
 export default LoginScreen;
