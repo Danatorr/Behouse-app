@@ -31,7 +31,7 @@ const LoginScreen = () => {
                     />
 
                     <UserTextInput 
-                        label="Password"
+                        label="Senha"
                         placeholder="* * * * * * * *"
                         placeholderTextColor="#A4A4A4"
                         onChangeText={handleChange('password')}
@@ -48,7 +48,7 @@ const LoginScreen = () => {
     );
 }
 
-const UserTextInput = ({label, icon, ...props}) => {
+const UserTextInput = ({label, ...props}) => {
     return(
         <View>
             <StyledTextInputLabel>{label}</StyledTextInputLabel>

@@ -45,7 +45,7 @@ export const PageTitleBlack = styled.Text`
     text-align: center;
     font-weight: bold;
     color: ${secondary};
-    padding: 10px;
+    padding-top: 75px;
 `;
 
 export const PageTitleWhite = styled.Text`
@@ -64,19 +64,20 @@ export const SubtTitleWhite = styled.Text`
 `;
 
 export const StyledFormArea = styled.View`
-    width: 90%;
     text-align: center;
-    flex: 1;
-    align-items: flex-start;
 `;
 
 export const StyledTextInput = styled.TextInput`
-    position: absolute;
     width: 260px;
     height: 33px;
-    top: 2px;
     border: 0.5px solid #A4A4A4;
     border-radius: 5px;
+    padding: 15px;
+    padding-left: 55px;
+    padding-right: 55px;
+    margin-vertical 3px;
+    margin-top: 20px;
+    color: red;
 `;
 
 export const StyledTextInputLabel = styled.Text`
